@@ -1,0 +1,87 @@
+body, html {
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header"
+        "sect1" 
+        "sect2" 
+        "sect3"
+        "main"
+        "footer";
+}
+aside {
+ grid-area: sidebar;
+ background-color: rgb(#a57bb1, 0.2),;   
+}
+
+header{
+    grid-area: header;
+    background-color: rgb(163, 112, 175, 0.2);
+}
+section:nth-of-type(1){
+    grid-area: sect1;
+    background-color: rgb(130, 106, 136, 0.2);
+}
+section:nth-of-type(2){
+    grid-area: sect2;
+    background-color: rgb(205, 149, 238, 0.2);
+}
+section:nth-of-type(3){
+    grid-area: sect3;
+    background-color: rgb(194, 154, 240, 0.2);
+}
+main{
+    grid-area: main;
+    background-color: rgb(235, 171, 248, 0.2);
+}
+footer{
+    grid-area: footer;
+    background-color: rgb(174, 101, 189, 0.2);
+}
+@media screen and (min-width: 600px) {
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 27% 27% 27%;
+    grid-template-rows: 8% 30% auto 10%;
+    grid-template-areas:
+    "sidebar header header header"
+    "sidebar sect1 sect2 sect3"
+    "sidebar main main main"
+    "sidebar footer footer footer";
+}
+
+}
+.about {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+  .about-info{
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
+  }
+  .contact {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  
+      
+  }
+    
+}
